@@ -38,15 +38,15 @@ jobs:
         if: sucsess()&& github.ref== 'refs/head/main'
         uses: appleboy/telegram-action@master
         with:
-          to: ${{secerets.TELEGRAM_TO}}
-          token: ${{ secerets.TELEGRAM_TOKEN}}
+          to: ${{secrets.TELEGRAM_TO}}
+          token: ${{ secrets.TELEGRAM_TOKEN}}
           args: "xyz-main-api: All test passed. Lets go!"
       - name: Send failure notification
         if: failure()&& github.ref== 'refs/head/main'
         uses: appleboy/telegram-action@master
         with:
-          to: ${{secerets.TELEGRAM_TO}}
-          token: ${{ secerets.TELEGRAM_TOKEN}}
+          to: ${{secrets.TELEGRAM_TO}}
+          token: ${{ secrets.TELEGRAM_TOKEN}}
           args: "xyz-main-api: Warning: test failed!"
     
 
