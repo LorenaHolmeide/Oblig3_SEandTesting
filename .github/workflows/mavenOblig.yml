@@ -35,7 +35,7 @@ jobs:
         run: |
           poetry run LeapYearTest -r w
       - name: Send Ok notification
-        if: sucsess()&& github.ref== 'refs/head/main'
+        if: success()&& github.ref== 'refs/head/main'
         uses: appleboy/telegram-action@master
         with:
           to: ${{secrets.TELEGRAM_TO}}
