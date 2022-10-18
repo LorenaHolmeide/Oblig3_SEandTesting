@@ -14,16 +14,11 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        
+        cache: 'maven'
     - name: Run the Maven verify phase
       run: |
           mvn -B package --file pom.xml
           mkdir staging && cp target/*.jar staging
-    
-    - name: Cache for Maven
-      uses: actions/cache@v2
-      with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
+          java -cp java LeapYearTest
+
 
