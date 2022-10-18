@@ -1,6 +1,10 @@
 name: Java CI with Maven
 
-on: [push]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -12,7 +16,8 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+        cache: maven
     - name: Run the Maven verify phase
-      run: mvn --batch-mode --update-snapshots verify
+      run: mvn -B package --file pom.xml
     
 
