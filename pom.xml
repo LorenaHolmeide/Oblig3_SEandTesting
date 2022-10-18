@@ -6,8 +6,6 @@
     <groupId>org.example</groupId>
     <artifactId>Oblig2</artifactId>
     <version>1.1.0-SNAPSHOT</version>
-    <packaging>maven-plugin</packaging>
-    <name>XML Maven Plugin</name>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
