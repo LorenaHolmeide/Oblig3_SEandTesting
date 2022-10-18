@@ -33,11 +33,4 @@
         <junit.jupiter.version>5.9.1</junit.jupiter.version>
         <junit.platform.version>1.9.1</junit.platform.version>
     </properties>
-    <configuration>
-         <!-- Prevent gpg from using pinentry programs -->
-         <gpgArguments>
-         <arg>--pinentry-mode</arg>
-         <arg>loopback</arg>
-         </gpgArguments>
-         </configuration>
 </project>
